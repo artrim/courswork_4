@@ -40,3 +40,14 @@ class Vacancies:
         Сортирует список вакансий по зарплате
         """
         return sorted(vacancies, reverse=True)
+
+    @staticmethod
+    def filter_vacancies_by_city(vacancies, city):
+        """
+        Фильтрует вакансии по городу
+        """
+        filter_list_by_city = []
+        for vacancy in vacancies:
+            if city == vacancy.city:
+                filter_list_by_city.append(vacancy)
+        return filter_list_by_city
