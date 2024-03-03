@@ -31,6 +31,9 @@ class Vacancies:
     def __lt__(self, other):
         return self.salary_from < other.salary_from
 
+    def __str__(self):
+        return f'Название: {self.title} \nГород: {self.city} \nЗарплата: {self.salary_from} \nURL: {self.url}\n'
+
     @staticmethod
     def sorted_vacancies_by_salary(vacancies):
         """
