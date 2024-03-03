@@ -69,3 +69,19 @@ class Vacancies:
         Отбирает нужное количество вакансий
         """
         return vacancies[0:top_n]
+
+    @staticmethod
+    def print_vacancies(vacancies, top_n):
+        """
+        Выводит отобранные пользователем вакансии
+        """
+        if len(vacancies) == 0:
+            print("\nПо вашему запросу вакансий не найдено\n")
+        elif len(vacancies) < top_n:
+            print(f"\nПо вашему запросу только {len(vacancies)} вакансий\nВот эти вакансии:\n")
+            for vacancy in vacancies:
+                print(vacancy)
+        else:
+            print("\nВот список подходящих вакансий:\n")
+            for vacancy in vacancies:
+                print(vacancy)
