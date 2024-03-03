@@ -27,3 +27,13 @@ class Vacancies:
             instance = cls(title, url, salary_from, city)
             vacancies.append(instance)
         return vacancies
+
+    def __lt__(self, other):
+        return self.salary_from < other.salary_from
+
+    @staticmethod
+    def sorted_vacancies_by_salary(vacancies):
+        """
+        Сортирует список вакансий по зарплате
+        """
+        return sorted(vacancies, reverse=True)
