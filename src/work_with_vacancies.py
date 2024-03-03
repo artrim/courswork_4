@@ -62,3 +62,10 @@ class Vacancies:
             if vacancy.salary_from >= salary:
                 filter_list_by_salary.append(vacancy)
         return filter_list_by_salary
+
+    @staticmethod
+    def get_top_vacancies(vacancies, top_n):
+        """
+        Отбирает нужное количество вакансий
+        """
+        return vacancies[0:top_n]
