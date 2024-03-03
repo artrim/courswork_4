@@ -51,3 +51,14 @@ class Vacancies:
             if city == vacancy.city:
                 filter_list_by_city.append(vacancy)
         return filter_list_by_city
+
+    @staticmethod
+    def filter_vacancies_by_salary(vacancies, salary):
+        """
+        Фильтрует вакансии по зарплате
+        """
+        filter_list_by_salary = []
+        for vacancy in vacancies:
+            if vacancy.salary_from >= salary:
+                filter_list_by_salary.append(vacancy)
+        return filter_list_by_salary
