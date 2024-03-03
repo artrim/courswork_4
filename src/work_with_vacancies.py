@@ -23,7 +23,6 @@ class Vacancies:
                 vac_data['salary']['from'] = 0
             salary_from = vac_data["salary"]["from"]
             city = vac_data["area"]['name']
-            # cls(title, url, salary_from, city)
             instance = cls(title, url, salary_from, city)
             vacancies.append(instance)
         return vacancies
